@@ -1,0 +1,59 @@
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #2c3e50;
+$completed-color: #95a5a6;
+$border-radius: 4px;
+$padding: 10px;
+
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+h1{
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.TodoForm {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: $padding;
+  background-color: #ecf0f1;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+ .todo-btn {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+}
+
+
+.butnnn {
+  @include flex-center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: $padding;
+  background-color: #fff;
+  border: 1px solid $completed-color;
+  border-radius: $border-radius;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  .todo-input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: $secondary-color;
+  }
+
+ 
+
+ 
+  .todo-input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: $completed-color;
+  }
+}
